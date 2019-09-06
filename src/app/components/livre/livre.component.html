@@ -1,0 +1,43 @@
+<div class="main  ">
+
+  <ul class="bk-list " id="bk-list">
+    <li class="w3-margin-left">
+      <div [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}"
+           class="bk-book book-1 bk-bookdefault w3-display-container">
+        <div class="bk-front">
+          <div class="bk-cover-back"></div>
+          <div [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}"
+               class="bk-cover">
+            <div class="w3-display-middle w3-display-hover">
+              <button (click)="addQuantity()" class="w3-button w3-circle w3-black w3-opacity">
+                <fa name="magic" size="4x"></fa>
+              </button>
+            </div>
+            <div class="w3-display-topright w3-display-hover ">
+
+
+              <p class="w3-tag w3-tiny">{{livre.price}}€</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="bk-left">
+          <h2>
+            <span>{{livre.title}} -</span>
+          </h2>
+        </div>
+        <div class="bk-top"></div>
+        <div class="bk-bottom"></div>
+      </div>
+      <div class="bk-info ">
+
+        <h3><span>Price : {{livre.price}} €</span>
+          <a (click)="sendBook(livre)" [routerLink]="['/book', livre.isbn] ">{{livre.title}}</a>
+
+        </h3>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
